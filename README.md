@@ -44,7 +44,7 @@ npm run build
 
 ## 設定ファイル
 
-config_sample.txt を config.txt にコピーして使用してください。
+config_sample.txt を config.txt にコピーして使用するか、config.txtに変更後しようしてください
 
 ```bash
 copy config_sample.txt config.txt

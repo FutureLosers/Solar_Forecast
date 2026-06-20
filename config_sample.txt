@@ -1,0 +1,9 @@
+Last_Log=2026-06-20 16:51:38
+battery_capacity_wh=120.0
+battery_current_wh=80.0
+efficiency=0.9
+latitude=35.68
+load_power_w=1.0
+longitude=139.76
+panel_w=100.0
+timezone=Asia/Tokyo
