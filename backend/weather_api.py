@@ -24,7 +24,7 @@ def datetime_sunshine(latitude, longitude, timezone):
         "longitude": longitude,
         "hourly": ["shortwave_radiation"],
         "timezone": timezone,
-        "forecast_days": 1,
+        "forecast_days": 2,
     }
 
     responses = openmeteo.weather_api(url, params=params)
