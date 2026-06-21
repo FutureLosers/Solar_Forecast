@@ -62,6 +62,7 @@ def calculate_forecast(config):
             solar_24h_df["generation_wh"].iloc[:i].sum()
         )
 
+
         consumed_power = float(loaddevice.power_w * i)
 
         remained_power = (
@@ -69,6 +70,14 @@ def calculate_forecast(config):
             + generated_power
             - consumed_power
         )
+
+        if remained_power > battery.capacity_wh:
+            remained_power = battery.capacity_wh
+
+        if remained_power < 0:
+            remained_power = 0
+
+
 
         result_battery = Battery(
             battery.capacity_wh,
@@ -85,6 +94,8 @@ def calculate_forecast(config):
             "status": result_battery.judgement(),
             "remaining_wh": round(float(remained_power), 2),
         }
+
+
 
         history_result[f"{i}h"] = percent
 
